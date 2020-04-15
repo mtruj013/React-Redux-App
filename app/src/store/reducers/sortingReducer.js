@@ -1,7 +1,9 @@
 export const initialState = {
     result: '',
     isLoading: false,
-    error: '' 
+    error: '',
+  
+
 }
 
 export const sortingReducer = (state = initialState, action) => {
@@ -17,7 +19,7 @@ export const sortingReducer = (state = initialState, action) => {
                 ...state,
                 isLoading: false,
                 result: action.payload,
-                error: ''
+                error: '',
             };
         case 'FETCH_RESULT_FAILURE':
             return{
