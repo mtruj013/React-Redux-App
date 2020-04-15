@@ -9,6 +9,7 @@ export const sortingReducer = (state = initialState, action) => {
         case 'FETCH_RESULT_START':
             return{
                 ...state,
+                result: '',
                 isLoading: true
             };
         case 'FETCH_RESULT_SUCCESS':

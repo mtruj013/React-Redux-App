@@ -16,6 +16,8 @@ const SortingHat = props => {
                 <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
             )}
             {props.result && <h3>{props.result}</h3>}
+            {props.error && <p className="error">{props.error}</p>}
+            <button onClick={props.fetchResult}>Get Sorted</button>
         </div>
     )
 }
