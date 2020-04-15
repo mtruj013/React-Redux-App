@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
     result: '',
     isLoading: false,
     error: '' 
