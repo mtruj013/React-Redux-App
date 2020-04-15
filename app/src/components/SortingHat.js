@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux'
-import { fetchResult } from '../store/actions/sortActions'
+import { connect } from 'react-redux';
+import { fetchResult } from '../store/actions/sortActions';
+import Loader from 'react-loader-spinner';
 
 const SortingHat = props => {
 
@@ -10,7 +11,11 @@ const SortingHat = props => {
 
     return (
         <div>
-            <h3>"Oh you may not think I'm pretty, but don't judge on what you see, I'll eat myself if you can find a smarter hat than me."</h3>
+            <h2>"Oh you may not think I'm pretty, but don't judge on what you see, I'll eat myself if you can find a smarter hat than me."</h2>
+            {props.isLoading && (
+                <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
+            )}
+            {props.result && <h3>{props.result}</h3>}
         </div>
     )
 }
